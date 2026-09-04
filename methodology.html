@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FND Sentinel methodology and limitations for personal baseline, signal features, episode logging, learning, and alerts.">
+  <meta name="theme-color" content="#06172f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <title>Methodology and Limitations — FND Sentinel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">⌁</span><span>FND Sentinel</span></a>
+      <nav aria-label="Primary"><a href="support.html">Support</a><a href="methodology.html" aria-current="page">Method</a><a href="privacy.html">Privacy</a></nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <p class="eyebrow">Transparency</p>
+    <h1 class="page-title">Methodology and limitations</h1>
+    <p class="meta"><strong>Current app version:</strong> 1.0, build 3</p>
+    <p class="lede">FND Sentinel is an experimental personal pattern-tracking aid. It has not been clinically validated and does not diagnose, treat, prevent, or reliably predict FND episodes.</p>
+
+    <h2>Inputs</h2>
+    <p>With permission, the app reads Apple Health records for heart rate, heart-rate variability (SDNN), respiratory rate, blood oxygen, sleeping wrist temperature, steps, sleep, and resting heart rate. Availability and sampling frequency vary by wearer, hardware, region, settings, movement, and time of day. A wearer or caregiver separately logs episodes, near misses, and warning signs.</p>
+
+    <h2>Personal baseline</h2>
+    <p>For each available signal, the app maintains a running mean and spread. Heart rate, HRV, breathing, and steps also use hour-of-day baselines. Standard-deviation floors and clipped feature values limit the effect of sparse or extreme readings. Alerts remain data-limited until enough core samples exist.</p>
+
+    <h2>Pattern features</h2>
+    <p>The current model considers eleven derived features: heart rate above personal normal, recent heart-rate trend, lower HRV, breathing deviation, blood-oxygen dip, wrist-temperature deviation, short sleep, time awake, unusual stillness, time-of-day history, and a recent user-entered warning sign. Stale intermittent readings fade with age. Heart-rate features are muted during substantial movement and shortly after waking.</p>
+
+    <h2>Score and alert policy</h2>
+    <p>A local logistic model combines available standardized features into a 0–100 pattern score. The interface groups it as Calm, Watch, Elevated, or High. A notification normally requires consecutive elevated readings and observes a quiet period. Sensitivity changes thresholds; it does not increase certainty.</p>
+
+    <h2>Personal learning</h2>
+    <p>When full episodes are logged, the app compares available feature values roughly 5–60 minutes before those episodes with other stored periods. It averages repeated snapshots within each episode window, requires at least three episodes with a feature before moving that feature’s weight, limits how far a weight can move, and shrinks results toward the starting assumptions. This reduces—but does not remove—overfitting.</p>
+
+    <h2>Retrospective performance</h2>
+    <p>Insights re-scores stored history with the current weights and reports how many evaluable logged episodes had a sustained elevated reading in the prior 90 minutes, average lead time for detected episodes, and elevated alert runs not followed by a logged episode. These are retrospective summaries of incomplete personal data, not prospective clinical accuracy, and are especially unstable with few episodes.</p>
+
+    <h2>Known limitations</h2>
+    <ul>
+      <li>There is no established wearable signature that reliably predicts FND episodes for all people.</li>
+      <li>Apple Watch signals are intermittent, noisy, motion-sensitive, and not all available on every device or person.</li>
+      <li>Logged onset times, symptoms, and missed logs may be inaccurate.</li>
+      <li>Ordinary stress, illness, exercise, sleep loss, sensor fit, medication, and many other factors can resemble a logged pre-episode pattern.</li>
+      <li>Personal learning can overfit a small history, even with shrinkage and feature limits.</li>
+      <li>The app will miss episodes and generate false alerts. No displayed state—including Calm—means a person is safe.</li>
+    </ul>
+
+    <div class="notice" role="note">
+      <p><strong>Never use FND Sentinel for safety-critical decisions</strong> such as driving, bathing, swimming, heights, operating equipment, medication changes, or deciding whether someone may be left alone. Follow professional medical advice and the wearer’s care plan. Contact local emergency services when someone may be in danger.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><p>© 2026 William Evans</p><div class="footer-links"><a href="index.html">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></div></div></footer>
+</body>
+</html>
