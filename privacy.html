@@ -23,54 +23,41 @@
   </header>
 
   <main id="main">
-    <p class="eyebrow">Legal</p>
+    <p class="eyebrow">Your information</p>
     <h1 class="page-title">Privacy Policy</h1>
-    <p class="meta"><strong>Effective date:</strong> September 4, 2026</p>
-    <p class="lede">FND Sentinel processes personal health signals and episode records locally on the wearer’s iPhone and paired Apple Watch. No account is required. The app sends William Evans no Health data, episode records, usage logs, analytics, or identifiers. The developer operates no app server, advertising, analytics, or tracking service.</p>
-
-    <h2>Health data the app reads</h2>
-    <p>With your permission, FND Sentinel reads heart rate, heart-rate variability, respiratory rate, blood oxygen, sleeping wrist temperature, steps, sleep sessions, and resting heart rate from Apple Health. The watch can also read live heart rate during a check that the wearer starts. You control Health access in Apple’s Settings and Health apps.</p>
-
-    <h2>Episode and derived pattern data</h2>
-    <p>The app stores episode, near-miss, and warning-sign logs; optional symptoms and notes; personal baselines; derived feature snapshots and pattern scores; alert history; and app settings. These records are used on-device to compare recent signals with the wearer’s own prior patterns. They are not sent to the developer.</p>
-
-    <h2>iPhone and Apple Watch communication</h2>
-    <p>The paired devices exchange recent readings, logged events, settings, and pattern status through Apple’s WatchConnectivity system. FND Sentinel does not route that information through a developer-operated server.</p>
-
-    <h2>Storage and security</h2>
-    <p>App records are stored in the app’s private Application Support container with Apple complete file protection. The watch retains a small local status cache. Apple device backups and operating-system services are controlled by Apple and by your device and account settings.</p>
-
-    <h2>Notifications</h2>
-    <p>If allowed, FND Sentinel creates local notifications and watch haptics when its on-device pattern score crosses the configured threshold. Notification delivery is handled by Apple. The app does not send notification content to the developer.</p>
-
-    <h2>User-directed export</h2>
-    <p>The iPhone app can create a CSV export containing stored vitals, episode logs, pattern history, and alerts. Nothing is exported until a user selects this action and chooses a destination in Apple’s share sheet. Once shared, the selected recipient or service controls that copy under its own privacy practices.</p>
-
-    <h2>Tracking, advertising, analytics, and usage logs</h2>
-    <p>FND Sentinel includes no third-party advertising, cross-app tracking, developer-operated analytics, telemetry, crash-reporting SDK, or data broker integration. The app does not send the developer usage logs or identifiers. The developer does not receive, sell, or monetize app Health data, episode records, or app activity.</p>
-
-    <h2>Children and caregivers</h2>
-    <p>The watch interface may be used by a child with caregiver supervision. FND Sentinel does not knowingly transmit a child’s personal information to the developer. A parent or guardian should control device setup, Health permissions, exports, and any sharing of records.</p>
-
-    <h2>Your controls and deletion</h2>
+    <p class="meta"><strong>Effective date:</strong> September 6, 2026 · Version 2.0</p>
+    <p class="lede">FND Sentinel keeps a personal record on your devices. No account is required, and the app does not automatically send William Evans your Health data, family notes, care plan, usage logs, or identifiers. The developer operates no app server, advertising, analytics, or tracking service.</p>
+    <h2>Health records and personal entries</h2>
+    <p>With permission, the app reads available heart rate, heart-rate variability, breathing rate, blood oxygen, sleeping wrist temperature, steps, sleep, and resting heart rate from Apple Health. A live heart-rate check starts only when the wearer starts one on the watch; its workout-style session is discarded rather than saved to Fitness.</p>
+    <p>Local records can include episodes, warning signs, near misses, symptoms, severity, times, notes, energy and comfort ratings, journal highlights, a preferred name, support steps, preferences, emergency instructions, a trusted contact name and phone number, and appointment questions. The app also stores settings, personal baselines, experimental pattern calculations, alert history, and the identifiers needed to prevent duplicate transfers. These records support the features you use and are not sent automatically to the developer.</p>
+    <h2>Offline watch collection and transfer</h2>
+    <p>The watch can authorize Health access, record a live check, read available local Health records, and save notes without a connection to the iPhone app. It saves pending records locally. When the normally paired devices can communicate, Apple WatchConnectivity transfers batches in the background. The phone saves an inbox copy before confirming receipt; only that confirmation permits the watch to clear its copy. The phone clears its inbox after committing the records to its journal. Transfer timing is controlled by Apple, and the phone may need to be unlocked or reopened after a force-quit.</p>
+    <p>There is no developer relay, remote caregiver account, or Family Setup integration. A saved contact does not receive automatic messages. Calling a contact requires a user action.</p>
+    <h2>Local storage, protection, and backups</h2>
+    <p>The main phone journal and companion records use Apple complete file protection. Transfer queues, query cursors, and the watch live-reading buffer use protection until first unlock so background collection and receipt can work after the device has been unlocked once. Files remain in private app containers.</p>
+    <p>From build 8, app-managed record directories and saved record files are marked to be excluded from device backups. This requests exclusion; it cannot guarantee that records never appear in a backup or on a restored device. Apple Health syncing, operating-system services, and older device backups are controlled by Apple and your settings. FND Sentinel provides no app-managed iCloud database or account recovery. Export records you want to retain before replacing, erasing, or uninstalling an app or device.</p>
+    <h2>Retention</h2>
+    <p>The default phone policy keeps raw readings for 30 days, feature snapshots for 120 days, and recent assessment history for seven days; older high-frequency readings may be thinned. Journal entries, care plans, baselines, settings, and transfer receipts remain until removed or reset. Pending watch records are not discarded merely because they are old or the phone is unavailable. Device storage is finite; failed saves are reported rather than confirmed as successful.</p>
+    <h2>Notifications and exports</h2>
+    <p>Experimental pattern notifications and watch haptics are off by default for new installations; existing preferences are preserved. Notifications use Apple’s local delivery mechanisms and are not sent through a developer server.</p>
+    <p>You can preview a 14-day visit summary or create a CSV export, then choose a recipient or service in Apple’s share sheet. The summary may include check-ins, event details, notes, care and contact information, and appointment questions. Generating a preview does not send it. After you share, the recipient or service controls that copy under its own privacy practices. Deleting app records does not erase copies you have exported.</p>
+    <h2>External resources and support</h2>
+    <p>Care includes optional links to NINDS and FND Hope, opened only when selected. Those independent websites have their own privacy practices. This support website uses no added analytics, cookies, forms, or tracking scripts; its hosting provider, GitHub Pages, may process technical request information as part of hosting.</p>
+    <p>If you email support, the developer receives the information you choose to send and uses it to respond. Please do not include Health exports or identifying medical details unless you deliberately want to share them. The app includes no third-party advertising, analytics, telemetry, crash-reporting SDK, or data broker integration, and the developer does not sell app records.</p>
+    <h2>Families and your controls</h2>
+    <p>The phone experience is for the person keeping the record and their caregiver; the watch may be used by a child with adult supervision. A parent or guardian should control setup, permissions, exports, and sharing.</p>
     <ul>
-      <li>Change or revoke Health permissions in Apple’s Health or Settings app.</li>
-      <li>Turn risk alerts and watch haptics off in FND Sentinel Settings.</li>
-      <li>Delete individual episode records in the Episodes tab.</li>
-      <li>Use <strong>Settings → Delete all data</strong> to remove FND Sentinel’s locally stored records from the iPhone. This does not delete source records from Apple Health.</li>
-      <li>Deleting the apps removes their local containers, subject to Apple backup and restore behavior.</li>
+      <li>Change or revoke Health permissions on each device through Apple’s Health or Settings controls. Revocation does not erase previously saved app records.</li>
+      <li>Stop a live check on the watch. Other available Health records follow watchOS schedules and permissions.</li>
+      <li>Edit or delete individual check-ins and events in Journal, and edit the care plan in Care.</li>
+      <li>Use <strong>Settings → Delete all data</strong> to clear the phone’s records and pending transfer inbox. Apple Health and records still on the watch are not erased; the watch may transfer additional records later.</li>
+      <li>Removing the apps removes their local containers, subject to Apple’s backup and restore behavior. To prevent a watch backlog from arriving again, remove the watch app as well.</li>
     </ul>
-
     <h2>Medical limitation</h2>
-    <p>FND Sentinel is not a medical device, diagnosis, treatment, emergency service, or reliable predictor. Its outputs may be incomplete or wrong. Do not use the app for safety-critical decisions or instead of professional care.</p>
-
-    <h2>Changes to this policy</h2>
-    <p>This policy will be updated before a release adds accounts, cloud sync, remote analytics, caregiver servers, advertising, tracking, or another material data practice. The effective date identifies the current version.</p>
-
-    <section class="contact-box" aria-labelledby="contact-title">
-      <h2 id="contact-title">Privacy contact</h2>
-      <p>Email <a href="mailto:wwevans@gmail.com?subject=FND%20Sentinel%20privacy">wwevans@gmail.com</a> with privacy questions.</p>
-    </section>
+    <p>FND Sentinel is not a medical device, diagnosis, treatment, emergency service, or reliable predictor. Its outputs may be incomplete or wrong. Follow the care team’s plan and do not use the app for safety-critical decisions.</p>
+    <h2>Changes and contact</h2>
+    <p>Material changes to these practices will be reflected in this policy and its effective date.</p>
+    <section class="contact-box" aria-labelledby="contact-title"><h2 id="contact-title">Privacy contact</h2><p>Email <a href="mailto:wwevans@gmail.com?subject=FND%20Sentinel%20privacy">wwevans@gmail.com</a> with privacy questions.</p></section>
   </main>
 
   <footer class="site-footer"><div class="footer-inner"><p>© 2026 William Evans</p><div class="footer-links"><a href="index.html">Home</a><a href="support.html">Support</a></div></div></footer>

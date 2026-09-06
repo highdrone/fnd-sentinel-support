@@ -21,68 +21,40 @@
   <main id="main">
     <p class="eyebrow">Help center</p>
     <h1 class="page-title">FND Sentinel Support</h1>
-    <p class="lede">FND Sentinel helps a wearer and caregiver compare Apple Watch signals with locally logged episodes and warning signs.</p>
-
-    <div class="notice" role="note">
-      <p><strong>Do not rely on an alert—or the absence of one—for safety.</strong> The app will miss events and can raise false alerts. Follow the care plan agreed with clinicians. If someone is unresponsive, injured, having trouble breathing, or may otherwise be in danger, contact local emergency services.</p>
-    </div>
-
-    <h2>Requirements</h2>
-    <ul>
-      <li>An iPhone running iOS 17 or later.</li>
-      <li>For watch features, a paired Apple Watch running watchOS 10 or later with the FND Sentinel watch app installed.</li>
-      <li>Apple Health permissions for whichever signals are available and you choose to share.</li>
-    </ul>
-
+    <p class="lede">Keep check-ins, moments worth remembering, events, and your own care plan together. Sprout offers a simple watch experience; Today, Journal, Patterns, and Care organize the story on the phone.</p>
+    <div class="notice" role="note"><p><strong>How someone feels matters more than a reading.</strong> The app is not a reliable predictor or emergency monitor. Follow the care plan agreed with clinicians and seek emergency help when someone may be in danger.</p></div>
     <h2>Getting started</h2>
     <ol>
-      <li>Open FND Sentinel on the iPhone and read the medical limitation during onboarding.</li>
-      <li>Choose <strong>Allow and continue</strong> to review Apple Health and notification permissions, or skip and connect later from Settings.</li>
-      <li>Wear the Apple Watch normally and keep the devices synced while the app builds a personal baseline.</li>
-      <li>Log full episodes, near misses, and early warning signs consistently. Correct onset time is more useful than a long note.</li>
+      <li>Open the iPhone app and choose <strong>Let’s make it yours</strong>. Enter an optional name and review the app’s limits.</li>
+      <li>Choose <strong>Start with my journal</strong> to use check-ins and your care plan without Health access, or <strong>Connect Apple Health &amp; start</strong> to review permissions.</li>
+      <li>To explore first, select <strong>Explore a sample family</strong> on the welcome screen. A sample banner stays visible; <strong>Exit</strong> restores the personal profile.</li>
+      <li>Open Settings with the circular controls button at the top right of Today. Privacy and Support links are in About.</li>
     </ol>
-
-    <h2>Using the child-friendly watch screen</h2>
+    <h2>Devices and the watch</h2>
+    <p>The phone app requires iOS 17 or later; the watch app requires watchOS 10 or later. The watch can gather available Health records and save notes without the iPhone app connected. Offloading uses the normally paired iPhone and Apple Watch; a remote caregiver account and Apple Watch Family Setup are not supported. Keep both apps updated for confirmed delivery.</p>
     <ul>
-      <li><strong>I feel funny</strong> saves an early warning marker.</li>
-      <li><strong>Something happened</strong> asks whether it happened or almost happened, how strong it felt, and when.</li>
-      <li><strong>Start check</strong> begins a live heart-rate check. It uses more battery and should be a deliberate, short-term action.</li>
+      <li>Tap Sprout to change its pose. The character and scenery do not indicate health or safety.</li>
+      <li><strong>I feel funny</strong> saves a warning marker on the watch.</li>
+      <li>Swipe up for helpers. <strong>Something happened</strong> asks what happened, how big it felt, and when. <strong>Save my note</strong> saves locally before confirming success.</li>
+      <li><strong>Start check</strong> begins a live heart-rate session on the watch; <strong>Stop check</strong> ends it. The workout-style session is discarded and not saved to Fitness. A live check uses battery and can be interrupted by watchOS, another workout, or power loss.</li>
+      <li>A saved note is not proof that a caregiver has seen it. Tell a grown-up directly when help is needed.</li>
     </ul>
-    <p>The watch status uses plain language and always tells the wearer to involve a grown-up when needed. It is pattern information, not a sure prediction.</p>
-
-    <h2>The app says it is still learning</h2>
-    <p>This is expected at first. Baselines need repeated Apple Health readings, and personal learning needs consistently logged episodes. More data does not turn the app into a reliable medical predictor; use Insights only as a retrospective sanity check.</p>
-
-    <h2>Health or watch data is missing</h2>
-    <ul>
-      <li>Open iPhone Settings or the Health app and confirm FND Sentinel still has permission for the intended data types.</li>
-      <li>Confirm the Apple Watch is paired, unlocked, worn snugly, and has recently synced with the iPhone.</li>
-      <li>Open FND Sentinel on both devices, then pull down on the iPhone Now screen to refresh.</li>
-      <li>Some signals—including HRV, respiratory rate, blood oxygen, and wrist temperature—are measured intermittently and may not appear on every device or for every wearer.</li>
-    </ul>
-
-    <h2>Alerts</h2>
-    <p>Risk alerts require sustained elevated readings and respect the configured quiet period. Sensitivity, confirmation count, quiet period, and watch haptics can be changed in Settings. Higher sensitivity means more alerts, not greater certainty.</p>
-
-    <h2>Exporting for a clinician or caregiver</h2>
-    <p>Open <strong>Settings → Export CSV for clinician</strong>. Review the generated files before choosing a recipient in Apple’s share sheet. Health and episode data is sensitive; share only with someone you trust.</p>
-
-    <h2>Deleting data</h2>
-    <p>Delete individual entries from Episodes using the standard list deletion gesture. Use <strong>Settings → Delete all data</strong> to remove all FND Sentinel records stored on the iPhone. Source data in Apple Health is not deleted.</p>
-
+    <h2>Offline data and reconnecting</h2>
+    <p>Readings and notes wait in a protected watch queue. The phone saves a copy before sending a receipt; interrupted delivery retries with stable identifiers to prevent duplicates. Apple schedules transfer in the background when the devices can communicate. The phone app does not need to stay open.</p>
+    <p>If data is waiting, make sure both apps are updated, the devices are charged and unlocked, and Bluetooth or Wi-Fi communication is available. Open each app once after an update. If the phone app was force-quit, reopen it, then pull down on Today to refresh. If phone history is locked or a save fails, the transfer inbox retains its copy until import can finish. Check available storage if either app reports a save problem.</p>
+    <p>Other Health measurements are not continuous. Their availability depends on watchOS, hardware, region, permissions, movement, and measurement schedules. Revoking permissions stops access to those Health types but does not erase saved records. The app’s new Health collector copies additions; it does not mirror HealthKit deletions.</p>
+    <h2>Journal, patterns, and care</h2>
+    <p>Add energy, comfort, context, and highlights through Check in. Use Log event for an episode, near miss, or warning sign. Open a Journal entry to review or edit it. Patterns summarizes recorded observations with explicit counts; a missing entry means unknown, not a symptom-free day.</p>
+    <p>In Care, write the support steps and emergency instructions agreed with your care team, personal preferences, a trusted contact, and appointment questions. Support now displays your saved plan. Contacts are stored locally and receive no automatic messages.</p>
+    <h2>Alerts and model details</h2>
+    <p>New installations start with experimental alerts and haptics off; existing preferences remain. Settings controls sensitivity and confirmation behavior. The 0–100 index is not an episode probability. Historical fit uses the training history and is not prospective accuracy. Read <a href="methodology.html">Method and limitations</a>.</p>
+    <h2>Sharing and keeping a copy</h2>
+    <p>In Care, choose <strong>Preview visit summary</strong>, read the complete 14-day report, and use <strong>Share this summary</strong> only when ready. CSV export is in Settings. App records are marked for exclusion from device backups, so keep a user-created export before replacing or erasing a device. Shared copies are controlled by the destination you select.</p>
+    <h2>Deleting records</h2>
+    <p>Open a Journal entry to delete it, or use Settings → Delete all data for the phone’s records and pending transfer inbox. This does not erase Apple Health or the watch’s saved backlog. Watch records may sync later; uninstalling both apps removes their local containers, subject to Apple backup and restore behavior.</p>
     <h2>Privacy</h2>
-    <p>No account or developer server is used. Read the <a href="privacy.html">FND Sentinel Privacy Policy</a> for the complete local-processing, WatchConnectivity, export, and deletion explanation. See <a href="methodology.html">Methodology and limitations</a> for how the experimental personal pattern score works and where it can fail.</p>
-
-    <section class="contact-box" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contact support</h2>
-      <p>Email <a href="mailto:wwevans@gmail.com?subject=FND%20Sentinel%20support">wwevans@gmail.com</a>. Include:</p>
-      <ul>
-        <li>FND Sentinel version and build number</li>
-        <li>iPhone, Apple Watch, iOS, and watchOS versions</li>
-        <li>What you expected, what happened, and steps to reproduce it</li>
-      </ul>
-      <p>Do not email Health exports or other sensitive information unless you deliberately choose to do so.</p>
-    </section>
+    <p>Read the <a href="privacy.html">Privacy Policy</a> for the complete explanation of local storage, queued transfers, backups, exports, and controls.</p>
+    <section class="contact-box" aria-labelledby="contact-title"><h2 id="contact-title">Contact support</h2><p>Email <a href="mailto:wwevans@gmail.com?subject=FND%20Sentinel%20support">wwevans@gmail.com</a>. Include the app version/build, device and operating-system versions, and steps to reproduce the issue. Do not send medical exports unless you deliberately choose to share them.</p></section>
   </main>
 
   <footer class="site-footer"><div class="footer-inner"><p>© 2026 William Evans</p><div class="footer-links"><a href="index.html">Home</a><a href="privacy.html">Privacy</a></div></div></footer>

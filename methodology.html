@@ -21,7 +21,7 @@
   <main id="main">
     <p class="eyebrow">Transparency</p>
     <h1 class="page-title">Methodology and limitations</h1>
-    <p class="meta"><strong>Current app version:</strong> 1.0, build 4</p>
+    <p class="meta"><strong>Current app version:</strong> 2.0, build 8</p>
     <p class="lede">FND Sentinel is an experimental personal pattern-tracking aid. It has not been clinically validated and does not diagnose, treat, prevent, or reliably predict FND episodes.</p>
 
     <h2>Inputs</h2>
@@ -34,14 +34,17 @@
     <p>The current model considers eleven derived features: heart rate above personal normal, recent heart-rate trend, lower HRV, breathing deviation, blood-oxygen dip, wrist-temperature deviation, short sleep, time awake, unusual stillness, time-of-day history, and a recent user-entered warning sign. Stale intermittent readings fade with age. Heart-rate features are muted during substantial movement and shortly after waking.</p>
 
     <h2>Score and alert policy</h2>
-    <p>A local logistic model combines available standardized features into a 0–100 pattern score. The interface groups it as Calm, Watch, Elevated, or High. A notification normally requires consecutive elevated readings and observes a quiet period. Sensitivity changes thresholds; it does not increase certainty.</p>
+    <p>A local logistic model combines available standardized features into a 0–100 pattern score. This uncalibrated index is not an episode probability. Experimental model details are separate from the main family journal; the character’s appearance is independent of the index. New installations start with alerts off. A notification normally requires consecutive elevated readings and observes a quiet period. Sensitivity changes thresholds; it does not increase certainty.</p>
 
     <h2>Personal learning</h2>
     <p>When full episodes are logged, the app compares available feature values roughly 5–60 minutes before those episodes with other stored periods. It averages repeated snapshots within each episode window, requires at least three episodes with a feature before moving that feature’s weight, limits how far a weight can move, and shrinks results toward the starting assumptions. This reduces—but does not remove—overfitting.</p>
 
     <h2>Retrospective performance</h2>
-    <p>Insights re-scores stored history with the current weights and reports how many evaluable logged episodes had a sustained elevated reading in the prior 90 minutes, average lead time for detected episodes, and elevated alert runs not followed by a logged episode. These are retrospective summaries of incomplete personal data, not prospective clinical accuracy, and are especially unstable with few episodes.</p>
+    <p>The model details view re-scores the same stored history used for learning with the current weights and reports how many evaluable logged episodes had a sustained elevated reading in the prior 90 minutes, average lead time for detected episodes, and elevated alert runs not followed by a logged episode. These in-sample summaries can overstate performance, do not reproduce every live data-availability gate, and are not prospective clinical accuracy.</p>
 
+    <h2>Journal and offline recording</h2>
+    <p>Energy and comfort are personal 1–5 ratings, not clinical measures. Symptom counts describe entries, not causes. Missing entries remain unknown. Care plans and emergency instructions are entered by the family and should be agreed with the care team.</p>
+    <p>The watch records active live checks and copies available Health records locally. Durable batches transfer through a phone inbox before the watch clears its copy. Stable identifiers and receipts prevent duplicates. This improves data transport, not prediction accuracy; actual background transfer and measurement timing remain controlled by Apple. Live sessions can stop through system interruption or power loss, and no eight-sensor continuous stream is promised.</p>
     <h2>Known limitations</h2>
     <ul>
       <li>There is no established wearable signature that reliably predicts FND episodes for all people.</li>
